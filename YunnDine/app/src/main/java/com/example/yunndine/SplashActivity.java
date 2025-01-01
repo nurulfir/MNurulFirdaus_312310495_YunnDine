@@ -16,7 +16,7 @@ public class SplashActivity extends AppCompatActivity {
         // Delay splash screen for 2 seconds
         new Handler().postDelayed(() -> {
             // Start the MainActivity
-            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+            Intent intent = new Intent(SplashActivity.this, activity_main.class);
             startActivity(intent);
             finish();
         }, 2000); // 2000 milliseconds = 2 seconds

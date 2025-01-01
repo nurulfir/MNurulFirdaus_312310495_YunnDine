@@ -25,11 +25,11 @@
                 app:cardElevation="4dp">
 
                 <ImageView
-                    android:id="@+id/BasoTelur"
+                    android:id="@+id/ice_cream"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/baso" />
+                    android:src="@drawable/chocolate_ice_cream" />
             </androidx.cardview.widget.CardView>
 
             <!--Back Button-->
@@ -45,7 +45,7 @@
                 android:contentDescription="Kembali Ke Home Page"/>
         </RelativeLayout>
 
-        <!-- Kategori Soup -->
+        <!-- Kategori Minuman -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,12 +55,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Soup (1)"
+                android:text="Minuman (1)"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <!-- Item Sayur Sop -->
+            <!-- Item Jus -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/sayur_sop"
+                        android:src="@drawable/jus_mangga"
                         android:background="@drawable/round_background"
                         android:clipToOutline="true"/>
 
@@ -94,7 +94,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sayur Sop"
+                            android:text="Jus Mangga"
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             android:fontFamily="@font/roboto_regular"/>
@@ -103,7 +103,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="62 Terjual | Disukai Oleh 8"
+                            android:text="101 Terjual | Disukai Oleh 28"
                             android:textColor="@color/Gray"
                             android:textSize="12sp" />
 
@@ -120,7 +120,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:layout_marginEnd="8dp"
-                                android:text="Rp 15.500"
+                                android:text="Rp 15.000"
                                 android:textColor="@color/Blue1"
                                 android:textSize="14sp"
                                 android:fontFamily="@font/roboto_regular"
@@ -151,7 +151,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Personal (3)"
+                android:text="Sweet Treats (2)"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -166,7 +166,7 @@
                 app:cardElevation="2dp">
 
                 <LinearLayout
-                    android:id="@+id/BasoContainer"
+                    android:id="@+id/ice_cream_chocolate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -176,7 +176,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/baso"
+                        android:src="@drawable/chocolate_ice_cream"
                         android:background="@drawable/round_background"
                         android:clipToOutline="true"/>
 
@@ -191,7 +191,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bakso Telur"
+                            android:text="Ice Cream Coklat"
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             android:fontFamily="@font/roboto_regular"/>
@@ -200,7 +200,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="513 Terjual | Disukai oleh 33"
+                            android:text="1657 Terjual | Disukai oleh 689"
                             android:textColor="@color/Gray"
                             android:textSize="12sp" />
 
@@ -218,7 +218,7 @@
                                 android:layout_weight="1"
                                 android:layout_marginEnd="8dp"
                                 android:layout_marginRight="8dp"
-                                android:text="Rp 18.500"
+                                android:text="Rp 28.500"
                                 android:textColor="@color/Blue1"
                                 android:textSize="14sp"
                                 android:fontFamily="@font/roboto_regular"/>
@@ -247,6 +247,7 @@
                 app:cardElevation="2dp">
 
                 <LinearLayout
+                    android:id="@+id/DessertBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -257,7 +258,7 @@
                         android:layout_height="80dp"
                         android:scaleType="centerCrop"
                         android:background="@drawable/round_background"
-                        android:src="@drawable/seblak"
+                        android:src="@drawable/dessert_box_oreo"
                         android:clipToOutline="true"/>
 
                     <LinearLayout
@@ -271,7 +272,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Seblak Ceker"
+                            android:text="Dessert Box Oreo"
                             android:textColor="#000000"
                             android:textSize="16sp"
                             android:fontFamily="@font/roboto_regular"/>
@@ -280,7 +281,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="304 Terjual | Disukai oleh 17"
+                            android:text="1999 Terjual | Disukai oleh 678"
                             android:textColor="@color/Gray"
                             android:textSize="12sp" />
 
@@ -298,7 +299,7 @@
                                 android:layout_weight="1"
                                 android:layout_marginEnd="8dp"
                                 android:layout_marginRight="8dp"
-                                android:text="Rp 16.000"
+                                android:text="Rp 35.000"
                                 android:textColor="@color/Blue1"
                                 android:textSize="14sp"
                                 android:fontFamily="@font/roboto_regular"/>

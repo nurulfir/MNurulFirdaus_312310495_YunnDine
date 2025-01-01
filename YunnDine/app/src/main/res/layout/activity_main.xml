@@ -1,18 +1,769 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#F0F3FF">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header Section -->
+
+            <!-- Menu Categories -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:padding="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/paixpey" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toEndOf="@id/ivProfile"
+                    android:layout_toRightOf="@id/ivProfile"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Hi, Muhammad Nurul Firdaus"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Ingin apa hari ini?"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivNotification"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/notification" />
+
+                <ImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_toStartOf="@id/ivNotification"
+                    android:layout_toLeftOf="@id/ivNotification"
+                    android:src="@drawable/cari" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <!-- Pembuka -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/Pembuka"
+                        android:layout_width="110dp"
+                        android:layout_height="120dp"
+                        android:layout_marginRight="5dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardBackgroundColor="@color/white">
+
+                        <ImageView
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12dp"
+                            android:src="@drawable/appetizer" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="71dp"
+                            android:text="Pembuka"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/roboto_bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="93dp"
+                            android:text="68 Menu"
+                            android:textSize="10sp"
+                            android:textColor="@color/Gray"
+                            android:fontFamily="@font/roboto_regular"/>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <!-- Menu Utama -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/menuutama"
+                        android:layout_width="110dp"
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardBackgroundColor="@color/white">
+
+                        <ImageView
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12dp"
+                            android:src="@drawable/dish"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="71dp"
+                            android:text="Menu Utama"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/roboto_bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="93dp"
+                            android:text="70 menu"
+                            android:textSize="10sp"
+                            android:textColor="@color/Gray"
+                            android:fontFamily="@font/roboto_regular"/>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <!-- Penutup -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/Penutup"
+                        android:layout_width="110dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="5dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardBackgroundColor="@color/white">
+
+                        <ImageView
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12dp"
+                            android:src="@drawable/dessert"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="71dp"
+                            android:text="Penutup"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/roboto_bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="93dp"
+                            android:text="24 Menu"
+                            android:textSize="10sp"
+                            android:textColor="@color/Gray"
+                            android:fontFamily="@font/roboto_regular"/>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Makanan Populer Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Makanan Populer"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"/>
+
+                </RelativeLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <!-- CardView untuk item makanan populer -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewFoodItem1"
+                        android:layout_width="155dp"
+                        android:layout_height="200dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="8dp"
+                        app:layout_constraintWidth_percent="0.45">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <!-- ImageView untuk gambar makanan -->
+                            <ImageView
+                                android:id="@+id/imageViewFood1"
+                                android:layout_width="0dp"
+                                android:layout_height="120dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/nasi_goreng"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <!-- Text untuk nama makanan -->
+                            <TextView
+                                android:id="@+id/textViewFoodName1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Nasi Goreng Special"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:fontFamily="@font/roboto_bold"
+                                app:layout_constraintTop_toBottomOf="@id/imageViewFood1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <!-- Layout untuk rating dan jumlah ulasan -->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/ratingLayout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintTop_toBottomOf="@id/textViewFoodName1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_margin="8dp">
+
+                                <!-- Bintang 1 -->
+                                <ImageView
+                                    android:id="@+id/star1"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <!-- Bintang 2 -->
+                                <ImageView
+                                    android:id="@+id/star2"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toEndOf="@id/star1"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginLeft="2dp" />
+
+                                <!-- Bintang 3 -->
+                                <ImageView
+                                    android:id="@+id/star3"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toEndOf="@id/star2"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginLeft="2dp" />
+
+                                <!-- Bintang 4 -->
+                                <ImageView
+                                    android:id="@+id/star4"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toEndOf="@id/star3"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginLeft="2dp" />
+
+                                <!-- Bintang 5 -->
+                                <ImageView
+                                    android:id="@+id/star5"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toEndOf="@id/star4"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginLeft="2dp" />
+
+                                <!-- Jumlah ulasan -->
+                                <TextView
+                                    android:id="@+id/textViewReviewCount1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="(743)"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/Gray"
+                                    android:fontFamily="@font/roboto_regular"
+                                    app:layout_constraintStart_toEndOf="@id/star5"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginLeft="4dp" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+\
+
+                    <!-- CardView kedua untuk item makanan populer lain -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewFoodItem2"
+                        android:layout_width="155dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="4dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp"
+                        app:layout_constraintStart_toEndOf="@id/cardViewFoodItem1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.45">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <!-- ImageView untuk gambar makanan -->
+                            <ImageView
+                                android:id="@+id/imageViewFood2"
+                                android:layout_width="0dp"
+                                android:layout_height="120dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/nasi_kuning"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <!-- Text untuk nama makanan -->
+                            <TextView
+                                android:id="@+id/textViewFoodName2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Nasi Kuning Special"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:fontFamily="@font/roboto_bold"
+                                app:layout_constraintTop_toBottomOf="@id/imageViewFood2"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <!-- Layout untuk rating dan jumlah ulasan -->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/ratingLayout1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintTop_toBottomOf="@id/textViewFoodName2"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_margin="8dp">
+
+                                <!-- Bintang 1 -->
+                                <ImageView
+                                    android:id="@+id/star6"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <!-- Bintang 2 -->
+                                <ImageView
+                                    android:id="@+id/star7"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toEndOf="@id/star6"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginLeft="2dp" />
+
+                                <!-- Bintang 3 -->
+                                <ImageView
+                                    android:id="@+id/star8"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toEndOf="@id/star7"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginLeft="2dp" />
+
+                                <!-- Bintang 4 -->
+                                <ImageView
+                                    android:id="@+id/star9"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toEndOf="@id/star8"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginLeft="2dp" />
+
+                                <!-- Bintang 5 -->
+                                <ImageView
+                                    android:id="@+id/star10"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toEndOf="@id/star9"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginLeft="2dp" />
+
+                                <!-- Jumlah ulasan -->
+                                <TextView
+                                    android:id="@+id/textViewReviewCount2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="(743)"
+                                    android:textSize="12sp"
+                                    android:textColor="#9E9E9E"
+                                    android:fontFamily="@font/poppins_regular"
+                                    app:layout_constraintStart_toEndOf="@id/star10"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginLeft="4dp" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <!-- Favorit Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Favorit"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"/>
+
+                </RelativeLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/favoriteFoodSection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <!-- CardView pertama untuk makanan favorit -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewFavoriteFood1"
+                        android:layout_width="155dp"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="4dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginRight="8dp"
+                        app:layout_constraintWidth_percent="0.45">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <!-- ImageView untuk gambar makanan -->
+                            <ImageView
+                                android:id="@+id/imageViewFavoriteFood1"
+                                android:layout_width="0dp"
+                                android:layout_height="120dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/baso"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <!-- Text untuk nama makanan -->
+                            <TextView
+                                android:id="@+id/textViewFavoriteFoodName1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Bakso Telur"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/roboto_bold"
+                                app:layout_constraintTop_toBottomOf="@id/imageViewFavoriteFood1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <!-- Rating dan jumlah ulasan -->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/favoriteRatingLayout1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintTop_toBottomOf="@id/textViewFavoriteFoodName1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_margin="8dp">
+
+                                <!-- 5 bintang dan jumlah ulasan -->
+                                <ImageView android:id="@+id/favoriteStar1"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView android:id="@+id/favoriteStar2"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toEndOf="@id/favoriteStar1"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginLeft="2dp" />
+
+                                <ImageView android:id="@+id/favoriteStar3"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toEndOf="@id/favoriteStar2"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginLeft="2dp" />
+
+                                <ImageView android:id="@+id/favoriteStar4"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toEndOf="@id/favoriteStar3"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginLeft="2dp" />
+
+                                <ImageView android:id="@+id/favoriteStar5"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toEndOf="@id/favoriteStar4"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginLeft="2dp" />
+
+                                <TextView android:id="@+id/favoriteReviewCount1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="(4016)"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/Gray"
+                                    android:fontFamily="@font/roboto_regular"
+                                    app:layout_constraintStart_toEndOf="@id/favoriteStar5"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginLeft="4dp" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- CardView kedua untuk makanan favorit -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewFavoriteFood2"
+                        android:layout_width="155dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="4dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp"
+                        app:layout_constraintStart_toEndOf="@+id/cardViewFavoriteFood1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.45">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <!-- ImageView untuk gambar makanan -->
+                            <ImageView
+                                android:id="@+id/imageViewFavoriteFood2"
+                                android:layout_width="0dp"
+                                android:layout_height="120dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/mie_ayam"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <!-- Text untuk nama makanan -->
+                            <TextView
+                                android:id="@+id/textViewFavoriteFoodName2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Mie Ayam"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/roboto_bold"
+                                app:layout_constraintTop_toBottomOf="@id/imageViewFavoriteFood2"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <!-- Rating dan jumlah ulasan -->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/favoriteRatingLayout2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintTop_toBottomOf="@id/textViewFavoriteFoodName2"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_margin="8dp">
+
+                                <!-- 5 bintang dan jumlah ulasan -->
+                                <ImageView android:id="@+id/favoriteStar6"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView android:id="@+id/favoriteStar7"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toEndOf="@id/favoriteStar6"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginLeft="2dp" />
+
+                                <ImageView android:id="@+id/favoriteStar8"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toEndOf="@id/favoriteStar7"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginLeft="2dp" />
+
+                                <ImageView android:id="@+id/favoriteStar9"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toEndOf="@id/favoriteStar8"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginLeft="2dp" />
+
+                                <ImageView android:id="@+id/favoriteStar10"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/star"
+                                    app:layout_constraintStart_toEndOf="@id/favoriteStar9"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginLeft="2dp" />
+
+                                <TextView android:id="@+id/favoriteReviewCount6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="(1055)"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/Gray"
+                                    android:fontFamily="@font/roboto_regular"
+                                    app:layout_constraintStart_toEndOf="@id/favoriteStar10"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginLeft="4dp" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

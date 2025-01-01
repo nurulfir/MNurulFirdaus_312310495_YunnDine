@@ -12,6 +12,12 @@
 ## Definisi YunnDine
 **YunnDine** adalah aplikasi pemesanan makanan modern yang dirancang untuk memberikan pengalaman pemesanan yang cepat, mudah, dan nyaman. Dengan nama yang menggabungkan keunikan personal dan konsep makan malam, YunnDine menawarkan berbagai pilihan menu dari restoran favorit Anda, disertai dengan fitur antarmuka yang ramah pengguna dan layanan yang terpercaya. Aplikasi ini bertujuan untuk menyederhanakan proses pemesanan makanan, memastikan kualitas pelayanan terbaik, dan menghadirkan kemudahan menikmati hidangan lezat kapan saja dan di mana saja.
 
+## Icon aplikasi
+![alt text](<Screenshot/Icon YunnDine.png>)
+
+***Keterangan :***
+- Berikut adalah icon aplikasi untuk aplikasi YunnDine
+
 ## Output
 
 ![alt text](Screenshot/1.png)

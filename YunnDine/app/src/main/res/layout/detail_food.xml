@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/Bakso"
+            android:src="@drawable/baso"
             android:clipToOutline="true"
             android:outlineProvider="background"
             android:background="@drawable/round_background"/>
@@ -39,9 +39,10 @@
 
     <!-- Content Container -->
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="398dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+        android:layout_marginLeft="7dp"
         app:cardBackgroundColor="#F0F3FF"
         app:cardCornerRadius="20dp"
         app:cardElevation="0dp">
@@ -152,9 +153,9 @@
 
             <!-- Quantity Controls -->
             <LinearLayout
-                android:layout_width="88dp"
+                android:layout_width="90dp"
                 android:layout_height="30dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="14dp"
                 android:layout_marginLeft="280dp"
                 android:orientation="horizontal"
                 android:gravity="end"
@@ -162,8 +163,8 @@
 
                 <ImageButton
                     android:id="@+id/btnMinus"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="22dp"
+                    android:layout_height="match_parent"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:padding="4dp"
                     android:scaleType="fitCenter"
@@ -172,20 +173,20 @@
                 <TextView
                     android:id="@+id/tvQuantity"
                     android:layout_width="32dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
                     android:gravity="center"
                     android:text="0"
-                    android:textSize="16sp"
-                    android:layout_marginHorizontal="8dp" />
+                    android:textSize="16sp" />
 
                 <ImageButton
                     android:id="@+id/btnPlus"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="22dp"
+                    android:layout_height="match_parent"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:src="@drawable/plus_button"
                     android:padding="4dp"
-                    android:scaleType="fitCenter" />
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/plus_button" />
             </LinearLayout>
 
             <!-- Additional Information -->
@@ -202,7 +203,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/input_background"
                 android:hint="Masukkan informasi tambahan"
                 android:padding="8dp"
                 android:textSize="14sp" />
