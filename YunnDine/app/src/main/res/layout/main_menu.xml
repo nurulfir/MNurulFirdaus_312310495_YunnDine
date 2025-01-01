@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header dengan back button dan gambar -->
+        <RelativeLayout
+            android:layout_width="412dp"
+            android:layout_height="368dp"
+            android:padding="0dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="412dp"
+                android:layout_height="368dp"
+                android:layout_centerInParent="true"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="4dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/Bakso" />
+            </androidx.cardview.widget.CardView>
+
+            <!--Back Button-->
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/back_button"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:elevation="8dp"
+                android:contentDescription="Kembali Ke Home Page"/>
+        </RelativeLayout>
+
+        <!-- Kategori Soup -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Soup (1)"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Item Sayur Sop -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#F0F3FF"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sayur_sop"
+                        android:background="@drawable/round_background"
+                        android:clipToOutline="true"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sayur Sop"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/roboto_regular"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="62 Terjual | Disukai Oleh 8"
+                            android:textColor="@color/Gray"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical|end">
+
+                            <!-- Harga -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="8dp"
+                                android:text="Rp 15.500"
+                                android:textColor="@color/Blue1"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:layout_marginRight="8dp" />
+
+                            <!-- Tombol Plus -->
+                            <ImageButton
+                                android:id="@+id/btnAdd"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:contentDescription="Add Item"
+                                android:background="@drawable/round_background"
+                                android:src="@drawable/plus"
+                                android:scaleType="centerInside" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Kategori Personal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal (3)"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Item Bakso Telur -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#F0F3FF"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/Bakso"
+                        android:background="@drawable/round_background"
+                        android:clipToOutline="true"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bakso Telur"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/roboto_regular"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="513 Terjual | Disukai oleh 33"
+                            android:textColor="@color/Gray"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <!-- Harga -->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:text="Rp 18.500"
+                                android:textColor="@color/Blue1"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/roboto_regular"/>
+
+                            <!-- Tombol Plus -->
+                            <ImageButton
+                                android:id="@+id/btnAdd1"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:contentDescription="Add Item"
+                                android:background="@drawable/round_background"
+                                android:src="@drawable/plus"
+                                android:scaleType="centerInside"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Item Seblak Ceker -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#F0F3FF"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/round_background"
+                        android:src="@drawable/seblak"
+                        android:clipToOutline="true"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seblak Ceker"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/roboto_regular"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="304 Terjual | Disukai oleh 17"
+                            android:textColor="@color/Gray"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <!-- Harga -->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:text="Rp 16.000"
+                                android:textColor="@color/Blue1"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/roboto_regular"/>
+
+                            <!-- Tombol Plus -->
+                            <ImageButton
+                                android:id="@+id/btnAdd2"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:contentDescription="Add Item"
+                                android:background="@drawable/round_background"
+                                android:src="@drawable/plus"
+                                android:scaleType="centerInside"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

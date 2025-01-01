@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Logo aplikasi di tengah -->
+    <ImageView
+        android:id="@+id/splash_logo"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/yunndine"/>
+
+    <!-- Nama aplikasi di bawah logo (opsional) -->
+    <TextView
+        android:id="@+id/splash_app_name"
+        android:layout_width="245dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="385dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/app_name"
+        android:textColor="@color/Blue1"
+        android:textSize="48sp"/>
+
+</RelativeLayout>
