@@ -1,4 +1,4 @@
-# Project UTS { Semester 3 } <img src=https://i.pinimg.com/564x/fd/88/8c/fd888c43145aa84d5e3037082d470910.jpg width="130px">
+# Project UAS { Semester 3 } <img src=https://i.pinimg.com/564x/fd/88/8c/fd888c43145aa84d5e3037082d470910.jpg width="130px">
 
 ## Profil
 |  |  |
